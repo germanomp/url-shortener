@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: url-shortener
+
+  data:
+    redis:
+      host: redis
+      port: 6379
+
+server:
+  port: 8080
