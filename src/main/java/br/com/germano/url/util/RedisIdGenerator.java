@@ -5,7 +5,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile({"dev", "prod"})
+@Profile({"dev", "prod", "test"})
 public class RedisIdGenerator implements IdGenerator {
 
     private static final String KEY = "url:id:sequence";

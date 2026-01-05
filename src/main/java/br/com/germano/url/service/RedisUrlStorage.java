@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 @Service
-@Profile({"dev", "prod"})
+@Profile({"dev", "prod", "test"})
 public class RedisUrlStorage implements UrlStorage {
 
     private final RedisTemplate<String, String> redisTemplate;

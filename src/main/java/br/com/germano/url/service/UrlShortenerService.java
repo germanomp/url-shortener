@@ -5,8 +5,6 @@ import br.com.germano.url.util.IdGenerator;
 import br.com.germano.url.util.UrlStorage;
 import org.springframework.stereotype.Service;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 @Service
 public class UrlShortenerService {
 
