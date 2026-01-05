@@ -16,7 +16,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
-public class Controller {
+public class UrlController {
 
     private final UrlShortenerService service;
 

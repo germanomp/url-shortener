@@ -1,6 +1,9 @@
 spring:
-  application:
-    name: url-shortener
+  data:
+    redis:
+      host: localhost
+      port: 6379
 
-server:
-  port: 8080
+app:
+  cache:
+    ttl: 15 # segundos
