@@ -1,17 +1,21 @@
 services:
-
   redis:
     image: redis:7
-    container_name: redis
     ports:
       - "6379:6379"
 
-  api:
-    build: .
-    container_name: url-shortener-api
+  backend:
+    build: ./backend
     ports:
       - "8080:8080"
-    environment:
-      SPRING_PROFILES_ACTIVE: prod
     depends_on:
       - redis
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

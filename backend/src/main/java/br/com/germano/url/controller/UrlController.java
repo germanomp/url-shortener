@@ -21,6 +21,7 @@ import java.io.IOException;
         name = "URL Shortener",
         description = "Endpoints para encurtamento e redirecionamento de URLs"
 )
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
