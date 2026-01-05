@@ -21,10 +21,15 @@ import java.io.IOException;
         name = "URL Shortener",
         description = "Endpoints para encurtamento e redirecionamento de URLs"
 )
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
+@CrossOrigin(
+        origins = {"http://localhost:5173", "http://127.0.0.1:5173"},
+        allowCredentials = "true",
+        allowedHeaders = "*",
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS}
+)
 public class UrlController {
 
     private final UrlShortenerService service;
